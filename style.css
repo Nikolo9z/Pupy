@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.container {
+    background-color: #212529;
+    color: aliceblue;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    grid-template-rows:1fr 1.8fr 1fr;
+    column-gap: 5px;
+    grid-template-areas:"nav header userinfo"
+    "nav posts userinfo"
+    "nav posts userinfo";
+}
+.container .nav{
+    grid-area: nav;
+    background-color: aqua;
+    border: 1px solid rgb(214, 19, 19);
+}
+.container .header{
+    grid-area: header;
+}
+.container .posts{
+    grid-area: posts;
+
+}
+.container .userinfo{
+    grid-area: userinfo;
+}
