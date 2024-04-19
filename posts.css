@@ -11,6 +11,7 @@
     border-width:1px solid #495057;
     overflow: auto;
     scrollbar-width: thin;
+    scroll-behavior: smooth;
 }
 .container .posts .itempost{
 

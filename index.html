@@ -105,6 +105,22 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        // Obtener el elemento .posts
+        var posts = document.querySelector('.posts');
+
+        // Escuchar el evento de rueda (wheel) en toda la ventana
+        window.addEventListener('wheel', function(event) {
+            // Obtener la cantidad de desplazamiento vertical
+            var deltaY = event.deltaY;
+
+            // Aplicar la misma cantidad de desplazamiento al elemento .posts
+            posts.scrollTop += deltaY;
+
+            // Evitar el desplazamiento predeterminado de la ventana
+            event.preventDefault();
+        });
+    </script>
 </body>
+
 </html>
