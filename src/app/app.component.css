@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
-
-
 .container {
     color: aliceblue;
     display: grid;
@@ -21,6 +19,12 @@
         grid-template-areas:
         "header"
         "posts";
+    }
+    .container .userinfo{
+        display: none;
+    }
+    .container .nav{
+        display: none;
     }
     
 }
