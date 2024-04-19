@@ -1,4 +1,4 @@
-.container .nav{
+.nav{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6,7 +6,7 @@
     width: 100%;
     border-right: 1px solid #495057;
 }
-.container .nav .logo{
+.nav .logo{
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -14,12 +14,12 @@
     font-weight: bold;
 
 }
-.container .nav .logo img{
+.nav .logo img{
     width: 30%;
     object-fit: cover;
 
 }
-.container .nav ul{
+.nav ul{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
     margin: 0;
     gap: 30px;
 }
-.container .nav ul li{
+.nav ul li{
     width: auto;
     padding: 10px;
     font-size: 20px;
@@ -38,10 +38,10 @@
     color: #ffffff;
     border-radius: 20px;
 }
-.container .nav ul li:hover{
+.nav ul li:hover{
     background-color: #495057;
 }
-.container .nav ul li a{
+.nav ul li a{
     text-decoration: none;
     color: #ffffff;
 }

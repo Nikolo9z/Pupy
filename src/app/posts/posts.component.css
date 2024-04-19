@@ -1,4 +1,4 @@
-.container .posts{
+.posts{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -13,7 +13,7 @@
     scrollbar-width: thin;
     scroll-behavior: smooth;
 }
-.container .posts .itempost{
+.posts .itempost{
 
     color: #212529;
     grid-area: itempost;
@@ -31,7 +31,7 @@
     ". contenido contenido"
     ". actions actions";
 }
-.container .posts .itempost .imgperfil{
+.posts .itempost .imgperfil{
     justify-self: center;
     grid-area: imgperfil;
     padding: 5px;
@@ -40,7 +40,7 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.container .posts .itempost .nombre{
+.posts .itempost .nombre{
     grid-area: nombre;
     justify-self: start;
     align-self: center;
@@ -51,7 +51,7 @@
     }
 
 }
-.container .posts .itempost .contenido{
+.posts .itempost .contenido{
     scrollbar-width: thin;
     font-weight: 400;
     font-size: 14px;
@@ -61,7 +61,7 @@
     display:block;
     overflow:auto;
 }
-.container .posts .itempost .actions{
+.posts .itempost .actions{
 
     align-self: start;
     grid-area: actions;
