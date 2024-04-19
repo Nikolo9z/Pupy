@@ -1,0 +1,16 @@
+<div class="posts">
+    <div class="itempost" *ngFor="let item of publicaciones">
+        <div class="itempost"></div>
+        <img class="imgperfil" src="{{item.users.avatar_url}}" alt="">
+        <span class="nombre">{{item.users.name}}<span>{{item.users.user_name}}</span></span>
+        <div class="contenido">
+            <span>{{item.contenido}}</span>
+        </div>
+
+        <div class="actions">
+            <i class="fa-solid fa-comment"></i>
+            <i class="fa-solid fa-repeat"></i>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+    </div>
+</div>

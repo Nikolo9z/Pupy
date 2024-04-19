@@ -2,21 +2,18 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     max-height: 70vh;
-    margin-top: 5px;
     width: 100%;
-    grid-template-areas:"itempost";
     gap: 10px;
     border-width:1px solid #495057;
     overflow: auto;
     scrollbar-width: thin;
     scroll-behavior: smooth;
 }
-.posts .itempost{
-
+.itempost{
+    width: 90%;
     color: #212529;
-    grid-area: itempost;
     background-color: #6c757d;
     border-radius: 20px;
     font-size: 15px;
@@ -31,7 +28,7 @@
     ". contenido contenido"
     ". actions actions";
 }
-.posts .itempost .imgperfil{
+.itempost .imgperfil{
     justify-self: center;
     grid-area: imgperfil;
     padding: 5px;
@@ -40,7 +37,7 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.posts .itempost .nombre{
+.itempost .nombre{
     grid-area: nombre;
     justify-self: start;
     align-self: center;
@@ -51,7 +48,7 @@
     }
 
 }
-.posts .itempost .contenido{
+.itempost .contenido{
     scrollbar-width: thin;
     font-weight: 400;
     font-size: 14px;
@@ -61,7 +58,7 @@
     display:block;
     overflow:auto;
 }
-.posts .itempost .actions{
+.itempost .actions{
 
     align-self: start;
     grid-area: actions;
