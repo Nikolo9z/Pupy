@@ -13,6 +13,7 @@
     scrollbar-width: thin;
 }
 .container .posts .itempost{
+
     color: #212529;
     grid-area: itempost;
     background-color: #6c757d;
@@ -50,6 +51,7 @@
 
 }
 .container .posts .itempost .contenido{
+    scrollbar-width: thin;
     font-weight: 400;
     font-size: 14px;
     align-self: start;
