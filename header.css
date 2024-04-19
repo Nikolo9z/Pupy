@@ -1,5 +1,5 @@
 .container .header {
-    border-bottom: 2px solid #8b8e91;
+    border-bottom:1px solid #495057;
     display: grid;
     grid-template-columns: 10% 1fr;
     grid-template-rows: 1fr 20%;
@@ -20,8 +20,8 @@
     align-self: flex-start;
     grid-area: img;
     padding: 5px;
-    width: 100%;
-    height: auto;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%;
 
