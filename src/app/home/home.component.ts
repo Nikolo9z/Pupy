@@ -1,4 +1,4 @@
-import { PostsService } from './../services/post-services.service';
+import { PostsService } from '../services/post.service';
 import { Component } from '@angular/core';
 import { PostsModel } from '../model/posts';
 import { CommonModule } from '@angular/common';
@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { UserinfoComponent } from './components/userinfo/userinfo.component';
+import { UserService } from '../services/User.service';
+import { UserCurrent } from '../model/user';
 
 @Component({
   selector: 'app-home',
@@ -16,15 +18,18 @@ import { UserinfoComponent } from './components/userinfo/userinfo.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  userCurrent!: UserCurrent;
   publicaciones:PostsModel[] = [];
-  constructor(private postService: PostsService) {
-    
-  }
+  constructor(private postService: PostsService,private userService:UserService) {}
   ngOnInit(): void {
+    this.getUsuario();
     this.getPosts();
+  }
+  async getUsuario(){
+    return await this.userService.obtenerSesion();
   }
   async getPosts(){
     this.publicaciones = await this.postService.getPosts();
-    console.log(this.publicaciones);
   }
+
 }

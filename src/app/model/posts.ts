@@ -3,8 +3,8 @@ export class PostsModel{
     created_at: string;
     contenido: string;
     user_id: string;
-    users: Users;
-    constructor(id: string, contenido: string, created_at: string, user_id: string, users: Users){
+    users: UsersPost;
+    constructor(id: string, contenido: string, created_at: string, user_id: string, users: UsersPost){
         this.id = id;
         this.contenido = contenido;
         this.created_at = created_at;
@@ -13,7 +13,7 @@ export class PostsModel{
     }
 }
 
-interface Users {
+export interface UsersPost {
   id: string;
   name: string;
   user_name: string;

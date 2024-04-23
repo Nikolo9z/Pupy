@@ -1,7 +1,8 @@
-import { PostsService } from './../services/post-services.service';
+import { PostsService } from '../services/post.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { UserService } from '../services/User.service';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private PostsService: PostsService) { }
+  constructor(private userService:UserService) { }
 
   async iniciarSesion() {
-    const response=await this.PostsService.iniciarSesion();
+    const response=await this.userService.iniciarSesion();
   }
 }
