@@ -28,7 +28,6 @@ async cerrarSesion(){
 }
 async obtenerSesion():Promise<UserCurrent>{
   const current=(await this._supabaseClient.auth.getSession()).data.session?.user.id
-  //obtener usuario de la tabla publica users con el id
   const { data, error } = await this._supabaseClient.from('users').select('*').eq('id',current);
   if(error){
     throw error;

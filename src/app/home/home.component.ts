@@ -18,7 +18,7 @@ import { UserCurrent } from '../model/user';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  userCurrent!: UserCurrent;
+  userCurrent?: UserCurrent;
   publicaciones:PostsModel[] = [];
   constructor(private postService: PostsService,private userService:UserService) {}
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class HomeComponent {
     this.getPosts();
   }
   async getUsuario(){
-    return await this.userService.obtenerSesion();
+    this.userCurrent=await this.userService.obtenerSesion();
   }
   async getPosts(){
     this.publicaciones = await this.postService.getPosts();

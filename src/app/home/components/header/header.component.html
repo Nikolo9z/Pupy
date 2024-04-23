@@ -1,9 +1,10 @@
 <div class="header">
     <img src="{{user?.avatar_url}}" alt="">
-    <input type="text" placeholder="¿Qué estás pensando?">
+    <input [formControl]="formInput" type="text" placeholder="¿Qué estás pensando?" (keyup.enter)="crearPost()">
     <div class="icons-input">
         <i class="fa-solid fa-face-smile"></i>
         <i class="fa-solid fa-camera-retro"></i>
-        <span (click)="crearPost('hola')">Publicar</span>
+        <span class="textoerror" *ngIf="showError">Entrada no valida!</span>
+        <span class="botonpublicar" (click)="crearPost()">Publicar</span>
     </div>
 </div>
