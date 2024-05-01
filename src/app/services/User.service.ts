@@ -17,7 +17,7 @@ async iniciarSesion(){
   await this._supabaseClient.auth.signInWithOAuth({
     provider:'github',
     options:{
-      redirectTo:'http://localhost:4200/home'
+      redirectTo:'https://puppy-b67.pages.dev/home'
     }
   });
 }
