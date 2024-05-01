@@ -8,19 +8,24 @@ import { PostsModel } from '../model/posts';
 })
 export class PostsService {
   private _supabaseClient:SupabaseClient;
+  private publicaciones: PostsModel[] = [];
 
   constructor() {
     this._supabaseClient = createClient(environment.supabaseUrl, environment.supabaseKey);
   }
   //ver todos los posts
-  async getPosts():Promise<PostsModel[]>{
+  async ObtenerPosts():Promise<void>{
     const { data, error } = await this._supabaseClient
     .from('posts')
     .select('*, users(*)');
     if(error){
       throw error;
     }
-    return data.map(post => new PostsModel(post.id,post.contenido, post.created_at, post.user_id, post.users));
+    this.publicaciones = data.map((post:any) => new PostsModel(post.id, post.contenido, post.created_at, post.user_id, post.users));
+  }
+  async mostrarPosts():Promise<PostsModel[]>{
+    await this.ObtenerPosts();
+    return this.publicaciones;
   }
   //crear un post
   async createPost(contenido:string, user_id:string){
@@ -32,4 +37,5 @@ export class PostsService {
     }
     return data;
   }
+  
 }

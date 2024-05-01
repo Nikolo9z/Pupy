@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@ctrl/ngx-emoji-mart/picker';
 html,body{
+    max-height: 100vh;
+    display: grid;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,3 +14,5 @@ html,body{
     scrollbar-color: #495057 #212529;
     scrollbar-width: thin;
 }
+html, body { height: 100%; }
+

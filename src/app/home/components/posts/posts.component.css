@@ -6,7 +6,6 @@
     max-height: 70vh;
     width: 100%;
     gap: 10px;
-    border-width:1px solid #495057;
     overflow: auto;
     scrollbar-width: thin;
     scroll-behavior: smooth;

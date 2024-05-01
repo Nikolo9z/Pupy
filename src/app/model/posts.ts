@@ -14,7 +14,6 @@ export class PostsModel{
 }
 
 export interface UsersPost {
-  id: string;
   name: string;
   user_name: string;
   avatar_url: string;

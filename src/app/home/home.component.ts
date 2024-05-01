@@ -1,5 +1,4 @@
-import { PostsService } from '../services/post.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PostsModel } from '../model/posts';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,19 +16,17 @@ import { UserCurrent } from '../model/user';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   userCurrent?: UserCurrent;
   publicaciones:PostsModel[] = [];
-  constructor(private postService: PostsService,private userService:UserService) {}
+  constructor(private userService:UserService) {}
   ngOnInit(): void {
-    this.getUsuario();
-    this.getPosts();
+    this.Inicio();
+  }
+  async Inicio(){
+    await this.getUsuario();
   }
   async getUsuario(){
     this.userCurrent=await this.userService.obtenerSesion();
   }
-  async getPosts(){
-    this.publicaciones = await this.postService.getPosts();
-  }
-
 }

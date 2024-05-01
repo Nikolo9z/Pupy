@@ -1,5 +1,4 @@
 .header {
-    border-bottom:1px solid #495057;
     display: grid;
     grid-template-columns: 10% 1fr;
     grid-template-rows: 1fr 20%;

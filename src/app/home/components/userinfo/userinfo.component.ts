@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { UserCurrent } from '../../../model/user';
+import { UserService } from '../../../services/User.service';
 
 @Component({
   selector: 'app-userinfo',
@@ -8,5 +10,6 @@ import { Component } from '@angular/core';
   styleUrl: './userinfo.component.css'
 })
 export class UserinfoComponent {
+  @Input() userActual?:UserCurrent;
 
 }

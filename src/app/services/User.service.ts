@@ -7,6 +7,7 @@ import { UserCurrent } from '../model/user';
   providedIn: 'root'
 })
 export class UserService {
+  private userActual?: UserCurrent;
   private _supabaseClient:SupabaseClient;
 
 constructor() {
@@ -33,8 +34,11 @@ async obtenerSesion():Promise<UserCurrent>{
     throw error;
   }
   const user=data[0];
-  return new UserCurrent(user.id,user.name,user.user_name,user.avatar_url,user.created_at);
-  
+  this.userActual = new UserCurrent(user.id,user.name,user.user_name,user.avatar_url,user.created_at);
+  return this.userActual;
 }
 
+async getUser():Promise<UserCurrent>{
+  return this.userActual!;
+  }
 }

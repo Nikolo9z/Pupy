@@ -1,6 +1,5 @@
 <div class="container">
     <app-nav class="nav"></app-nav>
-    <app-userinfo class="userinfo"></app-userinfo>
+    <app-userinfo class="userinfo" [userActual]="userCurrent"></app-userinfo>
     <app-header class="header" [user]="userCurrent" ></app-header>
-    <app-posts class="posts"[publicaciones]="publicaciones"></app-posts>
-</div>
+    <app-posts class="posts"></app-posts>
